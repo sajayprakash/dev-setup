@@ -30,11 +30,4 @@ git config --global user.email "sajayprakashk@gmail.com"
 git config --global user.name "Sajay Prakash"
 git config --global init.defaultBranch main
 
-# Install nix package manager
-sh <(curl -L https://nixos.org/nix/install) --daemon
-exec $SHELL
-
-# Install packages
-nix-env -iA nixpkgs.hugo nixpkgs.go
-
 echo "Setup complete!"
