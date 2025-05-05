@@ -9,7 +9,6 @@ sudo apt install curl git unzip zsh build-essential -y
 # ZSH and Ohmyzsh
 sudo chsh -s $(which zsh) $USER
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-zsh
 
 # ZSH Plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -23,13 +22,13 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm install --lts
 
 # Install pnpm
-curl -fsSL https://get.pnpm.io/install.sh | sh -
+curl -fsSL https://get.pnpm.io/install.sh | zsh -
 
 # Install bun
-curl -fsSL https://bun.sh/install | bash
+curl -fsSL https://bun.sh/install | zsh
 
 # Install rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | zsh -s -- -y
 
 # Setup git
 git config --global user.email "sajayprakashk@gmail.com"
