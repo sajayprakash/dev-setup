@@ -22,13 +22,13 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm install --lts
 
 # Install pnpm
-curl -fsSL https://get.pnpm.io/install.sh | zsh -
+curl -fsSL https://get.pnpm.io/install.sh | bash -
 
 # Install bun
-curl -fsSL https://bun.sh/install | zsh
+curl -fsSL https://bun.sh/install | bash
 
 # Install rustup
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | zsh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Setup git
 git config --global user.email "sajayprakashk@gmail.com"
