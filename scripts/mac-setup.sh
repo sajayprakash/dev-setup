@@ -19,3 +19,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 nvm install --lts
+
+# Setup git
+git config --global user.email "sajayprakashk@gmail.com"
+git config --global user.name "Sajay Prakash"
+git config --global init.defaultBranch "main"
+
+gh auth login
